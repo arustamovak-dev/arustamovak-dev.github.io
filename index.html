@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#1b1b1b">
+  <title>Екатерина Батина — Портфолио</title>
+  <meta name="description" content="Екатерина Батина — продуктовый дизайнер, 3+ года опыта. Мобильные и веб-интерфейсы, UX-исследования, дизайн-системы. Проекты и контакты.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="Екатерина Батина — Портфолио">
+  <meta property="og:description" content="Екатерина Батина — продуктовый дизайнер, 3+ года опыта. Мобильные и веб-интерфейсы, UX-исследования, дизайн-системы. Проекты и контакты.">
+  <link rel="canonical" href="https://arustamovak-dev.github.io/">
+  <meta property="og:url" content="https://arustamovak-dev.github.io/">
+  <meta property="og:image" content="https://arustamovak-dev.github.io/images/devices-animation-mint-poster.png">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23191919'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Arial' font-size='36' fill='%23F7F7F5'%3EЕ%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="photo-stack/photo-stack.js" defer></script>
+  <script src="script.js" defer></script>
+  <script src="interaction-cursor.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <button class="menu-toggle" type="button" aria-label="Открыть меню"
+        aria-expanded="false" aria-controls="navigation" hidden>
+        <span class="menu-toggle__icon" aria-hidden="true"><span></span><span></span></span>
+      </button>
+      <nav class="navigation" id="navigation" aria-label="Основная навигация">
+        <a class="navigation__link" href="#portfolio">Проекты</a>
+        <a class="navigation__link" href="#about">Обо мне</a>
+        <a class="navigation__link" href="#contact">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero container" id="home" aria-labelledby="hero-title">
+      <figure class="hero__badge">
+        <div class="hero__badge-drop">
+          <button class="hero__badge-trigger" type="button" aria-label="Покачать бейдж">
+          <img class="hero__badge-image" src="images/badge.png"
+            alt="Бейдж с портретом Екатерины Батиной, продуктового дизайнера"
+            width="564" height="1062" fetchpriority="high" draggable="false">
+          </button>
+        </div>
+      </figure>
+      <div class="hero__content">
+        <p class="hero__greeting">Привет!</p>
+        <h1 class="hero__title" id="hero-title" tabindex="-1">Я Екатерина<span class="hero__surname"> Батина</span></h1>
+        <p class="hero__description">Проектирую мобильные и веб-интерфейсы: от исследований и гипотез до передачи в разработку и приёмки в продукте.</p>
+        <div class="actions hero__actions">
+          <a class="button button--primary" href="#about">Обо мне</a>
+          <a class="text-link hero__download" href="documents/ekaterina-batina-cv.pdf" download="CV_Батина_Екатерина.pdf">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12m-4-4 4 4 4-4M5 16v4h14v-4"/></svg>
+            <span>Скачать резюме</span>
+          </a>
+        </div>
+        <ul class="tags hero__tags" aria-label="Профессиональные характеристики">
+          <li>3+ года опыта</li><li>UX-исследования</li><li>Дизайн-системы</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="portfolio section container" id="portfolio" aria-labelledby="portfolio-title">
+      <div class="section-heading" data-reveal="heading">
+        <h2 id="portfolio-title" tabindex="-1">Портфолио</h2>
+      </div>
+      <div class="projects">
+        <article class="project-card" aria-labelledby="project-01-title" data-reveal="image">
+          <details class="project-case" id="case-01">
+            <summary class="project-card__summary" aria-label="Открыть проект — Цифровой марафон">
+              <div class="media project-card__preview">
+                <img class="media__image--contain" src="images/devices-animation-mint-poster.png" data-poster-src="images/devices-animation-mint-poster.png" data-animated-src="images/devices-animation-mint-50fps.gif" alt="Цифровой марафон: интерфейсы на компьютере, планшете и телефоне" width="1280" height="832" loading="lazy" decoding="async">
+                <div class="media__fallback" aria-hidden="true"><span>[Превью проекта]</span></div>
+              </div>
+              <div class="project-card__info">
+                <div class="project-card__heading">
+                  <div class="project-card__title">
+                    <img class="project-card__logo" src="images/sber.svg" alt="Сбер" width="201" height="200" loading="lazy" decoding="async">
+                    <h3 id="project-01-title">Цифровой марафон</h3>
+                  </div>
+                  <span class="project-card__status project-card__status--ready">Можно посмотреть</span>
+                </div>
+                <p class="project__meta">Редизайн лендинга платформы конкурса, личного кабинета и тестирования</p>
+                <p class="project-card__year">2026</p>
+                <ul class="project-card__tags" aria-label="Направления проекта"><li>UX/UI</li><li>Редизайн</li><li>A/B-тесты</li><li>Адаптивы</li><li>Research</li></ul>
+              </div>
+            </summary>
+            <div class="project-case__content">
+              <dl class="case-overview">
+                <div><dt>Контекст</dt><dd><p class="project-case__description">Редизайн сайта марафона Сбера, «Школы 21» и Нетологии в новой дизайн-системе Сбера.</p></dd></div>
+                <div><dt>Период</dt><dd>2026</dd></div>
+                <div><dt>Моя роль</dt><dd>Продуктовый дизайн, A/B-тестирование и руководство командой из 3 дизайнеров.</dd></div>
+                <div><dt>Направления</dt><dd><ul class="case-tags"><li>UX/UI</li><li>Редизайн</li><li>A/B-тесты</li><li>Адаптивы</li><li>Research</li></ul></dd></div>
+                <div><dt>Платформа</dt><dd>Десктоп, планшет, мобильные устройства</dd></div>
+                <div><dt>Сайт</dt><dd><a class="text-link case-website" href="https://it-marathon.21-school.ru/" target="_blank" rel="noopener noreferrer">Перейти на сайт проекта</a></dd></div>
+              </dl>
+              <div class="project-case__cover"></div>
+              <section class="case-section">
+                <h3>Задача</h3>
+                <p>Сделать регистрацию главным сценарием: сократить форму с 12 до 6 полей, разбить её по шагам и собрать единый UI-kit.</p>
+              </section>
+              <section class="case-section">
+                <h3>Решение</h3>
+                <p>Сокращение формы регистрации с 12 до 6 полей, разделение на шаги и единый UI-kit. Редизайн охватывает лендинг платформы конкурса, личный кабинет и тестирование.</p>
+                <div class="case-gallery case-gallery--stacked">
+                  <figure class="case-figure">
+                    <a class="case-image-link" href="images/marathon-landing-before-after.png" target="_blank" rel="noopener" aria-label="Открыть изображение в полном размере: Лендинг платформы: до и после редизайна">
+                      <img class="case-image" src="images/marathon-landing-before-after.png" alt="Сравнение лендинга Цифрового марафона до и после редизайна" width="3413" height="4113" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Лендинг платформы: до и после редизайна</figcaption>
+                  </figure>
+                  <figure class="case-figure">
+                    <a class="case-image-link" href="images/marathon-responsive.png" target="_blank" rel="noopener" aria-label="Открыть изображение в полном размере: Адаптивные версии лендинга">
+                      <img class="case-image" src="images/marathon-responsive.png" alt="Лендинг Цифрового марафона на мобильном, десктопном и широком экранах" width="1550" height="1110" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Адаптивные версии лендинга</figcaption>
+                  </figure>
+                  <figure class="case-figure">
+                    <a class="case-image-link" href="images/marathon-account.png" target="_blank" rel="noopener" aria-label="Открыть изображение в полном размере: Личный кабинет">
+                      <img class="case-image" src="images/marathon-account.png" alt="Личный кабинет участника Цифрового марафона с баллами и этапами конкурса" width="674" height="488" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Личный кабинет</figcaption>
+                  </figure>
+                  <figure class="case-figure">
+                    <a class="case-image-link" href="images/marathon-testing.png" target="_blank" rel="noopener" aria-label="Открыть изображение в полном размере: Прохождение тестирования">
+                      <img class="case-image" src="images/marathon-testing.png" alt="Экран тестирования Цифрового марафона с вопросом, вариантами ответа и таймером" width="1512" height="982" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Прохождение тестирования</figcaption>
+                  </figure>
+                  <figure class="case-figure">
+                    <a class="case-image-link" href="images/marathon-mobile-stories.png" target="_blank" rel="noopener" aria-label="Открыть изображение в полном размере: Мобильные сценарии: «Виртуальный мир» и «Самокат»">
+                      <img class="case-image" src="images/marathon-mobile-stories.png" alt="Последовательности мобильных экранов Виртуального мира и партнёрских заданий Самоката" width="964" height="1260" loading="lazy" decoding="async">
+                    </a>
+                    <figcaption>Мобильные сценарии: «Виртуальный мир» и «Самокат»</figcaption>
+                  </figure>
+                </div>
+              </section>
+              <section class="case-section case-section--result">
+                <h3>Результат</h3>
+                <p>По итогам тестов: конверсия из визита в регистрацию выросла с 10% до 20%, прохождение этапов до конца — в 3 раза.</p>
+              </section>
+            </div>
+          </details>
+        </article>
+
+        <article class="project-card" aria-labelledby="project-03-title" data-reveal="image">
+          <details class="project-case" id="case-03">
+            <summary class="project-card__summary" aria-label="Открыть проект — Конкурс Минэкономразвития РФ">
+              <div class="media project-card__preview">
+                <img class="media__image--contain" src="images/ministry-contest.png" alt="Конкурс Минэкономразвития РФ: форма подачи заявки" width="1280" height="832" loading="lazy" decoding="async">
+                <div class="media__fallback" aria-hidden="true"><span>[Превью проекта]</span></div>
+              </div>
+              <div class="project-card__info">
+                <div class="project-card__heading">
+                  <div class="project-card__title">
+                    <img class="project-card__logo" data-logo-shape="symbol" src="images/ministry-logo.png" alt="Герб России" width="51" height="52" loading="lazy" decoding="async">
+                    <h3 id="project-03-title">Конкурс Минэкономразвития РФ</h3>
+                  </div>
+                  <span class="project-card__status project-card__status--pending">Пока оформляю</span>
+                </div>
+                <p class="project__meta">Перепроектирование подачи заявок и экспертной оценки</p>
+                <p class="project-card__year">2025</p>
+                <ul class="project-card__tags" aria-label="Направления проекта"><li>UX/UI</li><li>Подача заявок</li><li>Web</li><li>Research</li></ul>
+              </div>
+            </summary>
+            <div class="project-case__content">
+              <dl class="case-overview">
+                <div><dt>Контекст</dt><dd><p class="project-case__description">Платформа конкурса Минэкономразвития РФ. Работа над информационной архитектурой подачи заявки, уведомлениями о статусах и сценариями экспертной оценки.</p></dd></div>
+                <div><dt>Период</dt><dd>2025</dd></div>
+                <div><dt>Моя роль</dt><dd>Перепроектирование информационной архитектуры подачи заявки.</dd></div>
+                <div><dt>Направления</dt><dd><ul class="case-tags"><li>UX/UI</li><li>Подача заявок</li><li>Web</li><li>Research</li></ul></dd></div>
+                <div><dt>Платформа</dt><dd>Веб</dd></div>
+              </dl>
+              <div class="project-case__cover"></div>
+              <section class="case-section">
+                <h3>Задача</h3>
+                <p>Упростить форму подачи заявки, добавить уведомления со статусами и разделить типы заявок для экспертной оценки.</p>
+              </section>
+              <section class="case-section">
+                <h3>Решение</h3>
+                <p>Перепроектировала информационную архитектуру подачи заявки: упростила форму, ввела раздел уведомлений со статусами, разделила типы заявок для упрощения экспертной оценки.</p>
+                <div class="case-gallery">
+                <figure class="case-figure">
+                  <div class="case-placeholder" role="img" aria-label="Место для изображения: Подача заявки">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="5" y="7" width="38" height="34" rx="4" stroke="currentColor" stroke-width="1.5"/><circle cx="16" cy="18" r="3" stroke="currentColor" stroke-width="1.5"/><path d="m7 35 11-11 8 8 6-6 9 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <span>Место для изображения</span>
+                  </div>
+                  <figcaption>Подача заявки</figcaption>
+                </figure>
+                <figure class="case-figure">
+                  <div class="case-placeholder" role="img" aria-label="Место для изображения: Статус заявки">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="5" y="7" width="38" height="34" rx="4" stroke="currentColor" stroke-width="1.5"/><circle cx="16" cy="18" r="3" stroke="currentColor" stroke-width="1.5"/><path d="m7 35 11-11 8 8 6-6 9 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <span>Место для изображения</span>
+                  </div>
+                  <figcaption>Статус заявки</figcaption>
+                </figure>
+                </div>
+                <figure class="case-figure case-figure--wide">
+                  <div class="case-placeholder" role="img" aria-label="Место для изображения: Экспертная оценка">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="5" y="7" width="38" height="34" rx="4" stroke="currentColor" stroke-width="1.5"/><circle cx="16" cy="18" r="3" stroke="currentColor" stroke-width="1.5"/><path d="m7 35 11-11 8 8 6-6 9 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <span>Место для изображения</span>
+                  </div>
+                  <figcaption>Экспертная оценка</figcaption>
+                </figure>
+              </section>
+              <section class="case-section case-section--result">
+                <h3>Результат</h3>
+                <p>Скорость подачи заявки выросла в 4 раза за счёт автоматизации заполнения.</p>
+              </section>
+            </div>
+          </details>
+        </article>
+
+        <article class="project-card" aria-labelledby="project-04-title" data-reveal="image">
+          <details class="project-case" id="case-04">
+            <summary class="project-card__summary" aria-label="Открыть проект — ReflecTime">
+              <div class="media project-card__preview">
+                <img class="media__image--contain" src="images/reflectime.png" alt="ReflecTime: дашборд статистики, профиль и оценка встречи" width="1280" height="832" loading="lazy" decoding="async">
+                <div class="media__fallback" aria-hidden="true"><span>[Превью проекта]</span></div>
+              </div>
+              <div class="project-card__info">
+                <div class="project-card__heading">
+                  <div class="project-card__title">
+                    <img class="project-card__logo" data-logo-shape="symbol" src="images/reflectime-logo.svg" alt="Логотип ReflecTime" width="28" height="30" loading="lazy" decoding="async">
+                    <h3 id="project-04-title">ReflecTime</h3>
+                  </div>
+                  <span class="project-card__status project-card__status--pending">Пока оформляю</span>
+                </div>
+                <p class="project__meta">Планировщик задач в календаре для профилактики выгорания</p>
+                <p class="project-card__year">2025</p>
+                <ul class="project-card__tags" aria-label="Направления проекта"><li>UX/UI</li><li>Дашборд</li><li>Интеграция с Я.Календарь</li><li>Плагин</li><li>Research</li></ul>
+              </div>
+            </summary>
+            <div class="project-case__content">
+              <dl class="case-overview">
+                <div><dt>Контекст</dt><dd><p class="project-case__description">ReflecTime — стартап с планировщиком задач в календаре для профилактики выгорания. В продукте предусмотрены дашборд с аналитикой и статистикой, опросы пользователей и интеграция с Яндекс Календарём.</p></dd></div>
+                <div><dt>Период</dt><dd>2025</dd></div>
+                <div><dt>Моя роль</dt><dd>Продуктовый дизайн в команде стартапа.</dd></div>
+                <div><dt>Направления</dt><dd><ul class="case-tags"><li>UX/UI</li><li>Дашборд</li><li>Интеграция с Я.Календарь</li><li>Плагин</li><li>Research</li></ul></dd></div>
+                <div><dt>Платформа</dt><dd>Веб</dd></div>
+              </dl>
+              <div class="project-case__cover"></div>
+              <section class="case-section">
+                <h3>Задача</h3>
+                <p>Спроектировать планировщик задач в календаре для профилактики выгорания с аналитикой, статистикой и опросами пользователей.</p>
+              </section>
+              <section class="case-section">
+                <h3>Решение</h3>
+                <p>Разработала в команде дашборд с аналитикой и статистикой, опросы пользователей и интеграцию с Яндекс Календарём.</p>
+                <div class="case-gallery">
+                <figure class="case-figure">
+                  <div class="case-placeholder" role="img" aria-label="Место для изображения: Дашборд и статистика">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="5" y="7" width="38" height="34" rx="4" stroke="currentColor" stroke-width="1.5"/><circle cx="16" cy="18" r="3" stroke="currentColor" stroke-width="1.5"/><path d="m7 35 11-11 8 8 6-6 9 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <span>Место для изображения</span>
+                  </div>
+                  <figcaption>Дашборд и статистика</figcaption>
+                </figure>
+                <figure class="case-figure">
+                  <div class="case-placeholder" role="img" aria-label="Место для изображения: Опросы пользователей">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="5" y="7" width="38" height="34" rx="4" stroke="currentColor" stroke-width="1.5"/><circle cx="16" cy="18" r="3" stroke="currentColor" stroke-width="1.5"/><path d="m7 35 11-11 8 8 6-6 9 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <span>Место для изображения</span>
+                  </div>
+                  <figcaption>Опросы пользователей</figcaption>
+                </figure>
+                </div>
+                <figure class="case-figure case-figure--wide">
+                  <div class="case-placeholder" role="img" aria-label="Место для изображения: Интеграция с Яндекс Календарём">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="5" y="7" width="38" height="34" rx="4" stroke="currentColor" stroke-width="1.5"/><circle cx="16" cy="18" r="3" stroke="currentColor" stroke-width="1.5"/><path d="m7 35 11-11 8 8 6-6 9 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <span>Место для изображения</span>
+                  </div>
+                  <figcaption>Интеграция с Яндекс Календарём</figcaption>
+                </figure>
+              </section>
+              <section class="case-section case-section--result">
+                <h3>Результат</h3>
+                <p>Разработан в команде планировщик задач с дашбордом, опросами пользователей и интеграцией с Яндекс Календарём.</p>
+              </section>
+            </div>
+          </details>
+        </article>
+
+        <article class="project-card" aria-labelledby="project-02-title" data-reveal="image">
+          <div class="media project-card__preview">
+            <img class="media__image--contain" src="images/security-tech.png" alt="Security Tech: скрытые интерфейсы системы безопасности КПП, проект под NDA" width="1280" height="832" loading="lazy" decoding="async">
+            <div class="media__fallback" aria-hidden="true"><span>[Превью проекта]</span></div>
+          </div>
+          <div class="project-card__info">
+            <div class="project-card__heading">
+              <h3 id="project-02-title">Security Tech</h3>
+              <span class="project-card__status project-card__status--pending">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3m-4 2v3"/></svg>
+                По запросу
+              </span>
+            </div>
+            <p class="project__meta">Система безопасности КПП (под NDA)</p>
+                <p class="project-card__year">2024–2026</p>
+            <ul class="project-card__tags" aria-label="Направления проекта"><li>UX/UI</li><li>B2B/B2G</li><li>5 типов устройств</li><li>Web&amp;app</li><li>Прототип</li><li>Research</li></ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="about section container" id="about" aria-labelledby="about-title">
+      <div class="section-heading" data-reveal="heading">
+        <h2 id="about-title" tabindex="-1">Обо мне</h2>
+      </div>
+      <div class="about__body">
+        <div class="about__visual" data-reveal="image">
+          <figure class="about__photo">
+            <photo-stack>
+              <img src="photo-stack/assets/1.png" width="805" height="1055" alt="Портрет в коричневом жакете" loading="lazy" decoding="async">
+              <img src="photo-stack/assets/2.png" width="760" height="1053" alt="Чёрно-белая фотография на природе" loading="lazy" decoding="async">
+              <img src="photo-stack/assets/3.png" width="805" height="1055" alt="Детали белого корсета" loading="lazy" decoding="async">
+              <img src="photo-stack/assets/4.png" width="757" height="1022" alt="Белый наряд у зеркала" loading="lazy" decoding="async">
+            </photo-stack>
+            <figcaption class="about__photo-hint">Нажмите на фото, чтобы увидеть следующее</figcaption>
+          </figure>
+          <ul class="tags about__tags" aria-label="Обо мне">
+            <li>В прошлом дизайнер одежды</li>
+            <li>обожаю дизайн</li>
+            <li>командный игрок</li>
+          </ul>
+        </div>
+        <div class="about__content">
+          <p class="about__description" data-reveal="text">Продуктовый дизайнер с 3+ годами опыта. Участвовала в запуске 6 цифровых продуктов: от массовых B2C-платформ до B2B/B2G-систем для операторов. Веду полный цикл дизайна, работаю с аналитиками и разработчиками, проверяю реализацию. Вела команду из 3 дизайнеров. Использую ИИ для прототипов в коде, генерации визуалов и синтеза интервью.</p>
+          <dl class="facts" data-reveal="text">
+            <div class="facts__row"><dt>Подход</dt><dd>Проверяю гипотезы через A/B-тесты и юзабилити-тестирование, анализирую воронки и события.</dd></div>
+            <div class="facts__row"><dt>Навыки</dt><dd>UX-исследования, CJM, прототипирование, мобильные и веб-интерфейсы, дизайн-системы.</dd></div>
+            <div class="facts__row"><dt>Инструменты</dt><dd>Figma, Adobe Photoshop, Adobe Illustrator, Claude, ChatGPT, Recraft.</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="container contact__inner">
+        <div class="contact__content">
+          <div class="contact__intro">
+            <h2 id="contact-title" tabindex="-1" data-reveal="heading">Обсудим<br>работу вместе?</h2>
+          </div>
+          <div class="contact__links" data-reveal="text">
+            <div class="contact__item">
+              <span class="field-label">Почта</span>
+              <a class="text-link" id="email-link" href="mailto:arustamova_k@bk.ru">arustamova_k@bk.ru</a>
+            </div>
+            <div class="contact__item">
+              <span class="field-label">Telegram</span>
+              <a class="text-link" href="https://t.me/katrina_batina">@katrina_batina</a>
+            </div>
+            <div class="contact__item contact__behance">
+              <span class="field-label">Behance</span>
+              <a class="text-link" href="https://www.behance.net/arustamova">arustamova</a>
+            </div>
+          </div>
+        </div>
+        <figure class="contact__picture">
+          <img src="images/contact-katerina.png" alt="Котёнок с подписью Katerina"
+            width="501" height="501" loading="lazy" decoding="async">
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="project-dialog" id="project-dialog" aria-labelledby="project-dialog-title">
+    <div class="project-dialog__bar">
+      <button class="project-dialog__close" type="button" aria-label="Закрыть описание проекта"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="project-dialog__body">
+      <h2 id="project-dialog-title" tabindex="-1"></h2>
+      <div id="project-dialog-content"></div>
+    </div>
+  </dialog>
+
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__credits">
+        <p>© <span id="year">2026</span> Екатерина Батина</p>
+        <p class="footer__credit">Создано при помощи Codex</p>
+      </div>
+      <a class="text-link" href="#home">Наверх <span class="arrow" aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
+</body>
+</html>
