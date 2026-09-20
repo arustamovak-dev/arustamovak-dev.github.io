@@ -1,6 +1,6 @@
 # Екатерина Батина — портфолио
 
-Сайт: https://arustamovak-dev.github.io/
+Сайт: https://katrinabatina.ru/
 
 Персональный сайт продуктового дизайнера. Статический HTML, CSS и JavaScript, без сборки и сторонних зависимостей.
 
