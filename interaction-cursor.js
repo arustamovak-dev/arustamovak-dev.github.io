@@ -37,9 +37,9 @@
 
   function track(event) {
     if (!desktopPointer.matches || event.pointerType !== "mouse") return hide();
-    // Exclude modal content and the entire photo stack, including its shadow root.
+    // Exclude modal content, the photo stack and the hero badge.
     const path = event.composedPath();
-    if (path.some(node => node instanceof Element && node.matches("dialog, photo-stack"))) return hide();
+    if (path.some(node => node instanceof Element && node.matches("dialog, photo-stack, .hero__badge"))) return hide();
     const target = path.find(node => node instanceof Element && node.matches(selector));
     const blocked = path.some(node => node instanceof Element &&
       node.matches(':disabled, [aria-disabled="true"], [inert]'));
