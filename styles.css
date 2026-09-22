@@ -379,3 +379,5 @@ body.is-modal-open { position: fixed; top: var(--modal-scroll-offset); inset-inl
 @media (prefers-reduced-motion: reduce) {
   .interaction-cursor { transition: none; }
 }
+
+.case-section > .case-photo-note { margin-block: 1.5rem; padding: 1rem 1.25rem; border: 1px dashed var(--color-border); border-radius: .75rem; color: var(--color-muted); font-size: .9375rem; line-height: 1.5; }
