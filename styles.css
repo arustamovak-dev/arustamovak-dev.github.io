@@ -381,3 +381,12 @@ body.is-modal-open { position: fixed; top: var(--modal-scroll-offset); inset-inl
 }
 
 .case-section > .case-photo-note { margin-block: 1.5rem; padding: 1rem 1.25rem; border: 1px dashed var(--color-border); border-radius: .75rem; color: var(--color-muted); font-size: .9375rem; line-height: 1.5; }
+
+/* The dialog heading receives focus for screen readers, without a control outline. */
+#project-dialog-title:focus { outline: none; box-shadow: none; }
+@media (max-width: 767px) {
+  .project-card:has(.project-card__title-button:focus-visible),
+  .project-card:has(.project-card__summary:focus-visible) { outline: 1px solid var(--color-border); outline-offset: 2px; box-shadow: none; }
+  .project-card__title-button, .project-card__summary, #project-dialog-title { -webkit-tap-highlight-color: transparent; }
+  #project-dialog-title::selection, #project-dialog-title *::selection { background: transparent; color: inherit; }
+}

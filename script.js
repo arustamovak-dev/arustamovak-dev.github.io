@@ -249,6 +249,27 @@
     return () => { controller.abort(); reset(); };
   }
 
+  let modalPreviewRun = 0;
+
+  function initModalPreview(image) {
+    if (!image?.dataset.onceSrc) return () => {};
+    // Modal uses a single-pass GIF; hover and scroll remain exclusive to the card.
+    delete image.dataset.animatedSrc;
+    const controller = new AbortController();
+    const options = { signal: controller.signal };
+    const stop = () => { image.src = image.dataset.posterSrc; };
+    image.addEventListener("error", () => {
+      if (image.getAttribute("src") !== image.dataset.posterSrc) stop();
+    }, options);
+    reducedMotion.addEventListener("change", () => { if (reducedMotion.matches) stop(); }, options);
+    document.addEventListener("visibilitychange", () => { if (document.hidden) stop(); }, options);
+    if (!reducedMotion.matches && !document.hidden) {
+      // A fresh image URL restarts at frame one on each opening, including Safari.
+      image.src = `${image.dataset.onceSrc}?play=${++modalPreviewRun}`;
+    }
+    return () => { controller.abort(); stop(); };
+  }
+
   function createDialogController(dialog, title, onClose = () => {}) {
     if (!dialog || typeof dialog.showModal !== "function") return null;
     const closeButton = dialog.querySelector(".project-dialog__close");
@@ -337,8 +358,8 @@
       description.querySelector(".project-case__cover").replaceChildren(preview);
       content.replaceChildren(description);
       initImages(dialog);
-      disposePreviews = initHoverPreviews(dialog);
       controller.open(trigger);
+      disposePreviews = initModalPreview(preview.querySelector("img"));
     }
 
     document.querySelectorAll(".project-card").forEach((card) => {
