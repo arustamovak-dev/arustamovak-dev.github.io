@@ -112,9 +112,14 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .media { position: relative; isolation: isolate; overflow: hidden; background: var(--color-surface); }
 .media img { position: absolute; inset: 0; z-index: 1; width: 100%; height: 100%; object-fit: cover; transition: transform 320ms var(--ease-out); }
 .media img.media__image--contain { object-fit: contain; background: var(--color-bg); }
-.media.is-unavailable img { opacity: 0; }
-.media.is-loaded .media__fallback { visibility: hidden; }
-.media__fallback { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.5rem; color: var(--color-muted); font-size: .875rem; }
+.media.is-loading img, .media.is-unavailable img,
+.case-image-link.is-loading img, .case-image-link.is-unavailable img { opacity: 0; }
+.is-loaded > .image-loading-status { visibility: hidden; }
+.image-loading-status { position: absolute; inset: 0; z-index: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .75rem; padding: 1rem; border-radius: inherit; background: var(--color-surface); color: var(--color-muted); font-size: .875rem; text-align: center; pointer-events: none; }
+.image-loading-status::before { content: ""; width: 1.75rem; height: 1.75rem; border: 2px solid var(--color-border); border-top-color: currentColor; border-radius: 50%; animation: image-loading-spin .8s linear infinite; }
+.is-loaded > .image-loading-status::before, .is-unavailable > .image-loading-status::before { display: none; }
+@keyframes image-loading-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .image-loading-status::before { animation: none; } }
 .section { border-top: 1px solid var(--color-border); }
 .section-heading { display: flex; align-items: flex-start; gap: 1rem; }
 .about { display: grid; gap: 2rem; padding-block: 3rem 4rem; }
@@ -294,7 +299,7 @@ a[aria-disabled="true"] { cursor: default; }
 .case-section--result { padding-top: 2rem; border-top: 1px solid var(--color-border); }
 .case-gallery { display: grid; gap: 1.5rem; margin-top: 2rem; }
 .case-gallery.case-gallery--stacked { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
-.case-image-link { display: block; border-radius: 1rem; }
+.case-image-link { position: relative; display: block; border-radius: 1rem; }
 .case-image { width: 100%; height: auto; border-radius: 1rem; }
 .case-figure { min-width: 0; }
 .case-figure--wide { margin-top: 1.5rem; }

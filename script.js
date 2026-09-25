@@ -88,16 +88,38 @@
     update();
   }
 
+  const initializedImages = new WeakSet();
+
   function initImages(root = document) {
-    root.querySelectorAll(".media img").forEach((image) => {
-      const media = image.closest(".media");
+    root.querySelectorAll(".media img, .case-image-link img").forEach((image) => {
+      if (initializedImages.has(image)) return;
+      initializedImages.add(image);
+      const media = image.closest(".media, .case-image-link");
+      let status = media.querySelector(".image-loading-status");
+      if (!status) {
+        status = document.createElement("span");
+        status.className = "image-loading-status";
+        status.setAttribute("role", "status");
+        status.append(document.createElement("span"));
+        media.append(status);
+      }
       function update() {
         const loaded = image.complete && image.naturalWidth > 0;
+        const failed = image.complete && !loaded;
         media.classList.toggle("is-loaded", loaded);
-        media.classList.toggle("is-unavailable", !loaded);
+        media.classList.toggle("is-loading", !image.complete);
+        media.classList.toggle("is-unavailable", failed);
+        media.setAttribute("aria-busy", String(!image.complete));
+        status.querySelector("span").textContent = failed
+          ? "Не удалось загрузить изображение"
+          : "Загрузка изображения…";
       }
       image.addEventListener("load", update);
       image.addEventListener("error", update);
+      // Covers switch between a poster and an animation; each source has its own load state.
+      new MutationObserver(update).observe(image, {
+        attributes: true, attributeFilter: ["src", "srcset"]
+      });
       update();
     });
   }
