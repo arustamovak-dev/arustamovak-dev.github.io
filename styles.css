@@ -390,3 +390,5 @@ body.is-modal-open { position: fixed; top: var(--modal-scroll-offset); inset-inl
   .project-card__title-button, .project-card__summary, #project-dialog-title { -webkit-tap-highlight-color: transparent; }
   #project-dialog-title::selection, #project-dialog-title *::selection { background: transparent; color: inherit; }
 }
+
+.case-section--hse > figure + p { margin-top: 2rem; }
