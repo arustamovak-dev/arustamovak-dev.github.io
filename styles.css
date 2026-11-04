@@ -73,11 +73,11 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .header.is-enhanced .navigation { position: absolute; top: 100%; left: 0; width: 100%; padding: 1rem var(--page-padding); display: grid; gap: 0; background: var(--color-bg); border-bottom: 1px solid var(--color-border); }
 .header.is-enhanced .navigation__link { min-height: 56px; font-size: 1rem; }
 .header.is-open .navigation { animation: menu-in 220ms var(--ease-standard) both; }
-.hero { display: grid; gap: 2.5rem; padding-block: 2rem 3rem; }
+.hero { display: grid; gap: 1.5rem; width: min(56rem, calc(100% - var(--page-padding) * 2)); padding-block: 0 2.5rem; overflow: clip; }
 .hero__greeting { margin-bottom: .75rem; font-size: clamp(1.5rem, 1rem + 2vw, 2.5rem); line-height: 1.2; }
 .hero__title { font-size: clamp(2.5rem, -.41rem + 14.55vw, 3rem); line-height: 1.05; letter-spacing: -.035em; }
 .hero__surname { display: block; }
-.hero__description { max-width: 41.25rem; margin-top: 1.5rem; font-size: 1.125rem; line-height: 1.5; }
+.hero__description { max-width: 28rem; margin-top: 1.5rem; font-size: 1.125rem; line-height: 1.5; }
 .actions { display: flex; flex-wrap: wrap; gap: .75rem; }
 .hero__description p + p { margin-top: .875rem; }
 .hero__actions { flex-direction: column; align-items: stretch; gap: .375rem; margin-top: 1.5rem; }
@@ -92,7 +92,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .tags { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1.5rem 0 0; padding: 0; list-style: none; }
 .tags li { padding: .375rem .75rem; border-radius: var(--radius); background: var(--color-surface); font-size: .875rem; overflow-wrap: anywhere; }
 /* Прозрачный бейдж: точка подвеса — верх карабина. */
-.hero__badge { width: min(16rem, calc(100% - 3rem)); aspect-ratio: 564 / 1062; align-self: start; margin: 0 auto; }
+.hero__badge { width: min(12.5rem, calc(100% - 3rem)); aspect-ratio: 564 / 1062; align-self: start; margin: -3.25rem auto 0; }
 .hero__badge-trigger { display: block; width: 100%; padding: 0; border: 0; border-radius: 0; background: transparent; touch-action: manipulation; }
 .hero__badge-image { width: 100%; height: auto; transform-origin: 50% 3%; filter: drop-shadow(0 12px 12px #00000012); }
 .hero__badge.is-waiting .hero__badge-drop { visibility: hidden; }
@@ -197,12 +197,12 @@ a[aria-disabled="true"] { cursor: default; }
   .header__inner { flex-wrap: nowrap; }
   .header .navigation, .header.is-enhanced .navigation { position: static; display: flex; width: auto; gap: 1.5rem; padding: 0; border: 0; animation: none; }
   .header.is-enhanced .navigation__link { min-height: 44px; font-size: .875rem; }
-  .hero { grid-template-columns: repeat(8, minmax(0, 1fr)); gap: var(--gutter); align-items: center; padding-block: 3rem 4rem; min-height: 38rem; }
-  .hero__content { grid-column: 1 / 6; grid-row: 1; }
-  .hero__badge { grid-column: 6 / 9; grid-row: 1; position: relative; top: -3rem; width: min(17rem, calc(100% - 1.5rem)); }
-  .hero__title { font-size: clamp(2rem, 4vw, 3.5rem); white-space: nowrap; }
-  .hero__surname { display: inline; }
-  .hero__description { font-size: 1.25rem; }
+  .hero { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); column-gap: 2rem; align-items: center; padding-block: 0 3rem; }
+  .hero__content { grid-column: 1; grid-row: 1; padding-top: 2rem; }
+  .hero__badge { grid-column: 2; grid-row: 1; width: min(20rem, calc(100% - 1rem)); margin-top: -5rem; }
+  .hero__title { font-size: clamp(2.5rem, 4vw, 3rem); white-space: normal; }
+  .hero__surname { display: block; }
+  .hero__description { font-size: 1.125rem; }
   .button { min-height: 52px; padding: .875rem 1.5rem; }
   .button--secondary { padding: calc(.875rem - 1px) calc(1.5rem - 1px); }
   .facts__row { grid-template-columns: 8.75rem minmax(0, 1fr); gap: 1.5rem; }
@@ -223,11 +223,8 @@ a[aria-disabled="true"] { cursor: default; }
   body { font-size: 1.125rem; line-height: 1.56; }
   h2 { font-size: clamp(3rem, 1.765rem + 1.93vw, 3.5rem); }
   h3 { font-size: clamp(1.75rem, 1.132rem + .966vw, 2rem); }
-  .hero { grid-template-columns: repeat(12, minmax(0, 1fr)); padding-block: 4rem 5rem; min-height: 42.5rem; }
-  .hero__content { grid-column: 1 / 8; }
-  .hero__badge { grid-column: 9 / 13; top: -4rem; width: min(20rem, calc(100% - 2rem)); }
   .hero__title { line-height: 1.05; }
-  .hero__description { font-size: 1.25rem; }
+  .hero__description { font-size: 1.125rem; }
   .hero__actions { margin-top: 2rem; }
   .facts__row { grid-template-columns: 10rem minmax(0, 1fr); }
   .about { padding-block: 5rem 6rem; }
@@ -238,7 +235,7 @@ a[aria-disabled="true"] { cursor: default; }
   .footer__inner { padding-block: 1.5rem; }
 }
 @media (min-width: 1440px) { :root { --page-padding: 5rem; } }
-@media (max-width: 767px) { .hero { padding-top: .5rem; } .is-reveal-ready { transition-duration: 240ms; } .hero__title { animation-duration: 240ms; } }
+@media (max-width: 767px) { .is-reveal-ready { transition-duration: 240ms; } .hero__title { animation-duration: 240ms; } }
 @media (prefers-reduced-motion: reduce) {
   .text-link[href]:hover .arrow { transform: none; }
   html { scroll-behavior: auto; }
@@ -396,3 +393,7 @@ body.is-modal-open { position: fixed; top: var(--modal-scroll-offset); inset-inl
 }
 
 .case-section--hse > figure + p { margin-top: 2rem; }
+
+/* Center the project section below the compact introduction. */
+.portfolio { padding-top: 2rem; }
+.portfolio > .section-heading { justify-content: center; text-align: center; }
