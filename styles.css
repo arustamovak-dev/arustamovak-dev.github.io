@@ -197,7 +197,7 @@ a[aria-disabled="true"] { cursor: default; }
   .header__inner { flex-wrap: nowrap; }
   .header .navigation, .header.is-enhanced .navigation { position: static; display: flex; width: auto; gap: 1.5rem; padding: 0; border: 0; animation: none; }
   .header.is-enhanced .navigation__link { min-height: 44px; font-size: .875rem; }
-  .hero { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); column-gap: 2rem; align-items: center; padding-block: 0 3rem; }
+  .hero { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); column-gap: 2rem; align-items: center; min-height: 100vh; min-height: 100dvh; padding-block: 0 3rem; }
   .hero__content { grid-column: 1; grid-row: 1; padding-top: 2rem; }
   .hero__badge { grid-column: 2; grid-row: 1; width: min(20rem, calc(100% - 1rem)); margin-top: -5rem; }
   .hero__title { font-size: clamp(2.5rem, 4vw, 3rem); white-space: normal; }
