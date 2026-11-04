@@ -17,27 +17,12 @@
   <link rel="icon" href="favicon.ico?v=20261001" sizes="16x16 32x32 48x48">
   <link rel="icon" type="image/png" href="favicon.png?v=20261001" sizes="32x32">
   <link rel="apple-touch-icon" href="apple-touch-icon.png?v=20261001" sizes="180x180">
-  <link rel="stylesheet" href="styles.css?v=20260926">
-  <script src="photo-stack/photo-stack.js" defer></script>
+  <link rel="stylesheet" href="styles.css?v=20261104">
   <script src="script.js?v=20260926" defer></script>
   <script src="interaction-cursor.js?v=20260922" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Перейти к содержимому</a>
-
-  <header class="header" id="header">
-    <div class="container header__inner">
-      <button class="menu-toggle" type="button" aria-label="Открыть меню"
-        aria-expanded="false" aria-controls="navigation" hidden>
-        <span class="menu-toggle__icon" aria-hidden="true"><span></span><span></span></span>
-      </button>
-      <nav class="navigation" id="navigation" aria-label="Основная навигация">
-        <a class="navigation__link" href="#portfolio">Проекты</a>
-        <a class="navigation__link" href="#about">Обо мне</a>
-        <a class="navigation__link" href="#contact">Контакты</a>
-      </nav>
-    </div>
-  </header>
 
   <main id="main" tabindex="-1">
     <section class="hero container" id="home" aria-labelledby="hero-title">
@@ -53,16 +38,15 @@
       <div class="hero__content">
         <p class="hero__greeting">Привет!</p>
         <h1 class="hero__title" id="hero-title" tabindex="-1">Я Екатерина<span class="hero__surname"> Батина</span></h1>
-        <p class="hero__description">Проектирую мобильные и веб-интерфейсы: от исследований и гипотез до передачи в разработку и приёмки в продукте.</p>
+        <p class="hero__description">Продуктовый дизайнер с 3+ годами опыта. Проектирую мобильные и веб-интерфейсы: от исследований и гипотез до передачи в разработку и приёмки в продукте. Участвовала в запуске 6 цифровых продуктов: от массовых B2C-платформ до B2B/B2G-систем для операторов. Веду полный цикл дизайна, работаю с аналитиками и разработчиками, проверяю реализацию. Использую ИИ для прототипов в коде, генерации визуалов и синтеза интервью.</p>
         <div class="actions hero__actions">
-          <a class="button button--primary" href="#about">Обо мне</a>
           <a class="text-link hero__download" href="documents/ekaterina-batina-cv.pdf?v=a2bb5326a441" download="CV_Батина_Екатерина.pdf">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12m-4-4 4 4 4-4M5 16v4h14v-4"/></svg>
             <span>Скачать резюме</span>
           </a>
         </div>
         <ul class="tags hero__tags" aria-label="Профессиональные характеристики">
-          <li>3+ года опыта</li><li>UX-исследования</li><li>Дизайн-системы</li>
+          <li>B2C</li><li>B2B</li><li>B2G</li>
         </ul>
       </div>
     </section>
@@ -144,6 +128,26 @@
             </section>
             </div>
           </details>
+        </article>
+
+        <article class="project-card" aria-labelledby="project-04-title" data-reveal="image">
+              <div class="media project-card__preview">
+                <img class="media__image--contain" src="images/reflectime.png" alt="ReflecTime: дашборд статистики, профиль и оценка встречи" width="1280" height="832" loading="lazy" decoding="async">
+                <div class="media__fallback image-loading-status" role="status"><span>Загрузка изображения…</span></div>
+              </div>
+              <div class="project-card__info">
+                <div class="project-card__heading">
+                  <div class="project-card__title">
+                    <img class="project-card__logo" data-logo-shape="symbol" src="images/reflectime-logo.svg" alt="Логотип ReflecTime" width="28" height="30" loading="lazy" decoding="async">
+                    <h3 id="project-04-title">ReflecTime</h3>
+                  </div>
+                  <span class="project-card__status project-card__status--pending">Пока оформляю</span>
+                </div>
+                <p class="project__meta">Планировщик задач в календаре для профилактики выгорания</p>
+                <p class="project-card__year">2025</p>
+                <ul class="project-card__tags" aria-label="Направления проекта"><li>UX/UI</li><li>Дашборд</li><li>Интеграция с Я.Календарь</li><li>Плагин</li><li>Research</li></ul>
+              </div>
+
         </article>
 
         <article class="project-card" aria-labelledby="project-hse-title" data-reveal="image">
@@ -261,26 +265,6 @@
 
         </article>
 
-        <article class="project-card" aria-labelledby="project-04-title" data-reveal="image">
-              <div class="media project-card__preview">
-                <img class="media__image--contain" src="images/reflectime.png" alt="ReflecTime: дашборд статистики, профиль и оценка встречи" width="1280" height="832" loading="lazy" decoding="async">
-                <div class="media__fallback image-loading-status" role="status"><span>Загрузка изображения…</span></div>
-              </div>
-              <div class="project-card__info">
-                <div class="project-card__heading">
-                  <div class="project-card__title">
-                    <img class="project-card__logo" data-logo-shape="symbol" src="images/reflectime-logo.svg" alt="Логотип ReflecTime" width="28" height="30" loading="lazy" decoding="async">
-                    <h3 id="project-04-title">ReflecTime</h3>
-                  </div>
-                  <span class="project-card__status project-card__status--pending">Пока оформляю</span>
-                </div>
-                <p class="project__meta">Планировщик задач в календаре для профилактики выгорания</p>
-                <p class="project-card__year">2025</p>
-                <ul class="project-card__tags" aria-label="Направления проекта"><li>UX/UI</li><li>Дашборд</li><li>Интеграция с Я.Календарь</li><li>Плагин</li><li>Research</li></ul>
-              </div>
-
-        </article>
-
         <article class="project-card" aria-labelledby="project-02-title" data-reveal="image">
           <div class="media project-card__preview">
             <img class="media__image--contain" src="images/security-tech-2026.png" alt="Security Tech: сканирование документов и интерфейсы системы безопасности КПП" width="1280" height="832" loading="lazy" decoding="async">
@@ -291,7 +275,7 @@
               <h3 id="project-02-title">Security Tech</h3>
               <span class="project-card__status project-card__status--pending">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3m-4 2v3"/></svg>
-                По запросу
+                NDA
               </span>
             </div>
             <p class="project__meta">Система безопасности КПП (под NDA)</p>
@@ -299,38 +283,6 @@
             <ul class="project-card__tags" aria-label="Направления проекта"><li>UX/UI</li><li>B2B/B2G</li><li>5 типов устройств</li><li>Web&amp;app</li><li>Прототип</li><li>Research</li></ul>
           </div>
         </article>
-      </div>
-    </section>
-
-    <section class="about section container" id="about" aria-labelledby="about-title">
-      <div class="section-heading" data-reveal="heading">
-        <h2 id="about-title" tabindex="-1">Обо мне</h2>
-      </div>
-      <div class="about__body">
-        <div class="about__visual" data-reveal="image">
-          <figure class="about__photo">
-            <photo-stack>
-              <img src="photo-stack/assets/1.png" width="805" height="1055" alt="Портрет в коричневом жакете" loading="lazy" decoding="async">
-              <img src="photo-stack/assets/2.png" width="760" height="1053" alt="Чёрно-белая фотография на природе" loading="lazy" decoding="async">
-              <img src="photo-stack/assets/3.png" width="805" height="1055" alt="Детали белого корсета" loading="lazy" decoding="async">
-              <img src="photo-stack/assets/4.png" width="757" height="1022" alt="Белый наряд у зеркала" loading="lazy" decoding="async">
-            </photo-stack>
-            <figcaption class="about__photo-hint">Нажмите на фото, чтобы увидеть следующее</figcaption>
-          </figure>
-          <ul class="tags about__tags" aria-label="Обо мне">
-            <li>В прошлом дизайнер одежды</li>
-            <li>обожаю дизайн</li>
-            <li>командный игрок</li>
-          </ul>
-        </div>
-        <div class="about__content">
-          <p class="about__description" data-reveal="text">Продуктовый дизайнер с 3+ годами опыта. Участвовала в запуске 6 цифровых продуктов: от массовых B2C-платформ до B2B/B2G-систем для операторов. Веду полный цикл дизайна, работаю с аналитиками и разработчиками, проверяю реализацию. Использую ИИ для прототипов в коде, генерации визуалов и синтеза интервью.</p>
-          <dl class="facts" data-reveal="text">
-            <div class="facts__row"><dt>Подход</dt><dd>Проверяю гипотезы через A/B-тесты и юзабилити-тестирование, анализирую воронки и события.</dd></div>
-            <div class="facts__row"><dt>Навыки</dt><dd>UX-исследования, CJM, прототипирование, мобильные и веб-интерфейсы, дизайн-системы.</dd></div>
-            <div class="facts__row"><dt>Инструменты</dt><dd>Figma, Adobe Photoshop, Adobe Illustrator, Claude, ChatGPT, Recraft.</dd></div>
-          </dl>
-        </div>
       </div>
     </section>
 
