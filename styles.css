@@ -92,7 +92,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .tags { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1.5rem 0 0; padding: 0; list-style: none; }
 .tags li { padding: .375rem .75rem; border-radius: var(--radius); background: var(--color-surface); font-size: .875rem; overflow-wrap: anywhere; }
 /* Прозрачный бейдж: точка подвеса — верх карабина. */
-.hero__badge { width: min(12.5rem, calc(100% - 3rem)); aspect-ratio: 564 / 1062; align-self: start; margin: -3.25rem auto 0; }
+.hero__badge { width: min(14.5rem, calc(100% - 2rem)); aspect-ratio: 564 / 1062; align-self: start; margin: -1.25rem auto 0; }
 .hero__badge-trigger { display: block; width: 100%; padding: 0; border: 0; border-radius: 0; background: transparent; touch-action: manipulation; }
 .hero__badge-image { width: 100%; height: auto; transform-origin: 50% 3%; filter: drop-shadow(0 12px 12px #00000012); }
 .hero__badge.is-waiting .hero__badge-drop { visibility: hidden; }
@@ -199,7 +199,7 @@ a[aria-disabled="true"] { cursor: default; }
   .header.is-enhanced .navigation__link { min-height: 44px; font-size: .875rem; }
   .hero { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); column-gap: 2rem; align-items: center; min-height: 100vh; min-height: 100dvh; padding-block: 0 3rem; }
   .hero__content { grid-column: 1; grid-row: 1; padding-top: 2rem; }
-  .hero__badge { grid-column: 2; grid-row: 1; width: min(20rem, calc(100% - 1rem)); margin-top: -5rem; }
+  .hero__badge { grid-column: 2; grid-row: 1; width: min(24rem, 100%); margin-top: -2.25rem; }
   .hero__title { font-size: clamp(2.5rem, 4vw, 3rem); white-space: normal; }
   .hero__surname { display: block; }
   .hero__description { font-size: 1.125rem; }
