@@ -257,6 +257,13 @@ a[aria-disabled="true"] { cursor: default; }
 .project-card__title { display: flex; align-items: center; justify-content: flex-start; gap: .35em; min-width: 0; max-width: 100%; }
 .project-card__title h3 { flex: 0 1 auto; }
 .project-card__logo { flex: none; width: 1em; height: 1em; margin-top: 0; object-fit: contain; border-radius: .25rem; }
+/* Название курса занимает несколько строк рядом со статусом. */
+.project-card--course .project-card__title { align-items: flex-start; }
+.project-card--course .project-card__title h3 { white-space: normal; overflow-wrap: anywhere; }
+.project-card--course .project-card__logo { margin-top: .125em; }
+[data-logo-shape="rostelecom"] { background-color: white; }
+.project-card--course .project-card__preview { aspect-ratio: 1280 / 832; }
+.project-card--course .project-card__preview img { position: absolute; height: 100%; }
 .project-card__year { margin-top: .625rem; color: var(--color-muted); font-size: .875rem; line-height: 1.4; }
 .project-card__status { flex: none; display: inline-flex; align-items: center; gap: .3em; padding: .4em .5em; border-radius: .5rem; font-size: min(.75rem, 2.8cqi); line-height: 1.4; white-space: nowrap; }
 .project-card__status svg { flex: none; width: 1em; height: 1em; }
