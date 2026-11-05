@@ -358,8 +358,6 @@
     nav.setAttribute("aria-label", "Содержание кейса");
     const links = document.createElement("div");
     links.className = "marathon-toc__links";
-    const select = document.createElement("select");
-    select.setAttribute("aria-label", "Перейти к разделу кейса");
     const jump = index => {
       const section = sections[index];
       section.focus({ preventScroll: true });
@@ -373,13 +371,12 @@
       if (section.classList.contains("case-hypothesis")) button.className = "is-sub";
       button.addEventListener("click", () => jump(index));
       links.append(button);
-      select.add(new Option(button.textContent, String(index)));
       return button;
     });
-    select.addEventListener("change", () => jump(select.selectedIndex));
-    nav.append(links, select);
+    nav.append(links);
     layout.prepend(nav);
     const sync = () => {
+      if (!nav.getClientRects().length) return;
       const last = dialog.scrollTop + dialog.clientHeight >= dialog.scrollHeight - 2;
       const top = dialog.getBoundingClientRect().top +
         parseFloat(getComputedStyle(sections[0]).scrollMarginTop) + 2;
@@ -391,7 +388,6 @@
         if (i === index) button.setAttribute("aria-current", "location");
         else button.removeAttribute("aria-current");
       });
-      select.selectedIndex = index;
     };
     dialog.addEventListener("scroll", sync, { passive: true });
     window.addEventListener("resize", sync);

@@ -17,8 +17,8 @@
   <link rel="icon" href="favicon.ico?v=20261001" sizes="16x16 32x32 48x48">
   <link rel="icon" type="image/png" href="favicon.png?v=20261001" sizes="32x32">
   <link rel="apple-touch-icon" href="apple-touch-icon.png?v=20261001" sizes="180x180">
-  <link rel="stylesheet" href="styles.css?v=20261105-badge">
-  <script src="script.js?v=20261105" defer></script>
+  <link rel="stylesheet" href="styles.css?v=20261105-reflectime">
+  <script src="script.js?v=20261105-reflectime" defer></script>
   <script src="interaction-cursor.js?v=20260922" defer></script>
 </head>
 <body>
@@ -112,7 +112,7 @@
             <section class="case-hypothesis" data-case-nav="Партнёрские Stories"><p class="case-kicker">Гипотеза 03</p><h4>Дать повод вернуться в кабинет</h4>
             <p>Если между этапами можно заработать дополнительные баллы, у участника будет повод вернуться на платформу.</p>
             <p><strong>Решение.</strong> Добавила партнёрские Stories в раздел «Этапы»: участник открывает карточку, выполняет задание и получает баллы. Для мобильной версии отдельно проработала сценарии «Виртуальный мир» и «Самокат».</p>
-            <figure class="case-figure case-figure--wide"><a class="case-image-link" href="images/marathon-partner-stories.png?v=20261105" target="_blank" rel="noopener" aria-label="Открыть изображение: Stories партнёров"><img class="case-image" src="images/marathon-partner-stories.png?v=20261105" alt="Stories партнёров" width="1512" height="1660" loading="lazy" decoding="async"></a><figcaption>Stories партнёров</figcaption></figure>
+            <figure class="case-figure case-figure--wide"><a class="case-image-link" href="images/marathon-partner-stories.png?v=2588b2f083" target="_blank" rel="noopener" aria-label="Открыть изображение: Stories партнёров"><img class="case-image" src="images/marathon-partner-stories.png?v=2588b2f083" alt="Stories партнёров" width="1512" height="1660" loading="lazy" decoding="async"></a><figcaption>Stories партнёров</figcaption></figure>
             </section>
             <section class="case-hypothesis" data-case-nav="Тестирование"><p class="case-kicker">Гипотеза 04</p><h4>Помочь участнику закончить тест</h4>
             <p>Если тест можно пройти в удобное время и не потерять ответы при обрыве связи, участнику будет проще завершить этап.</p>
@@ -144,6 +144,8 @@
         </article>
 
         <article class="project-card" aria-labelledby="project-04-title" data-reveal="image">
+          <details class="project-case" id="case-04">
+            <summary class="project-card__summary" aria-label="Открыть проект — ReflecTime">
               <div class="media project-card__preview">
                 <img class="media__image--contain" src="images/reflectime.png" alt="ReflecTime: дашборд статистики, профиль и оценка встречи" width="1280" height="832" loading="lazy" decoding="async">
                 <div class="media__fallback image-loading-status" role="status"><span>Загрузка изображения…</span></div>
@@ -154,13 +156,115 @@
                     <img class="project-card__logo" data-logo-shape="symbol" src="images/reflectime-logo.svg" alt="Логотип ReflecTime" width="28" height="30" loading="lazy" decoding="async">
                     <h3 id="project-04-title">ReflecTime</h3>
                   </div>
-                  <span class="project-card__status project-card__status--pending">Пока оформляю</span>
+                  <span class="project-card__status project-card__status--ready">Можно посмотреть</span>
                 </div>
                 <p class="project__meta">Планировщик задач в календаре для профилактики выгорания</p>
                 <p class="project-card__year">2025</p>
                 <ul class="project-card__tags" aria-label="Направления проекта"><li>UX/UI</li><li>Дашборд</li><li>Интеграция с Я.Календарь</li><li>Плагин</li><li>Research</li></ul>
               </div>
-
+            </summary>
+            <div class="project-case__content"><div class="marathon-layout"><div class="marathon-article">
+              <dl class="case-overview" data-case-nav="О проекте">
+                <div><dt>Контекст</dt><dd><p class="project-case__description">ReflecTime помогает сотрудникам отмечать, как прошли рабочие встречи, прямо в Яндекс Календаре. Оценки собираются в статистику, чтобы можно было заметить, как меняется нагрузка.</p></dd></div>
+                <div><dt>Срок</dt><dd>6 месяцев</dd></div>
+                <div><dt>Моя роль</dt><dd><p>Спроектировала весь интерфейс продукта. Работала с фронтенд- и бэкенд-разработчиками и менеджером проекта.</p><ul class="case-tags case-tags--role"><li>UX/UI</li><li>Research</li><li>Плагин</li></ul></dd></div>
+                <div><dt>Результат</dt><dd><strong>ReflecTime вышел в продакшен.</strong> Команда стартапа ищет инвестора.</dd></div>
+              </dl>
+              <div class="project-case__cover"></div>
+              <section class="case-section case-section--marathon" data-case-nav="Задача">
+                <h3>Задача</h3>
+                <p>Связать встречу в календаре с обратной связью о ней. Сотруднику нужен короткий путь от события до оценки, а администратору — инструменты для работы с подразделениями и связями между участниками.</p>
+              </section>
+              <section class="case-section case-section--marathon" data-case-nav="Структура">
+                <h3>Шаг 1. Роли и сценарии</h3>
+                <p>Разделила действия сотрудника и администратора. На схеме пользовательского пути показала, что происходит после входа и какие действия доступны, если в календаре остались неоценённые события.</p>
+                <figure class="case-figure case-figure--wide">
+                  <a class="case-image-link" href="images/reflectime-case/roles.png" target="_blank" rel="noopener" aria-label="Открыть изображение: Роли и задачи пользователей ReflecTime"><img class="case-image" src="images/reflectime-case/roles.png" alt="Роли и задачи пользователей ReflecTime" width="2255" height="736" loading="lazy" decoding="async"></a>
+                  <figcaption>Роли и задачи пользователей ReflecTime</figcaption>
+                </figure>
+                <figure class="case-figure case-figure--wide">
+                  <a class="case-image-link" href="images/reflectime-case/architecture.png" target="_blank" rel="noopener" aria-label="Открыть изображение: Структура приложения и функциональные блоки"><img class="case-image" src="images/reflectime-case/architecture.png" alt="Структура приложения и функциональные блоки" width="2688" height="700" loading="lazy" decoding="async"></a>
+                  <figcaption>Структура приложения и функциональные блоки</figcaption>
+                </figure>
+                <figure class="case-figure case-figure--wide">
+                  <a class="case-image-link" href="images/reflectime-case/user-flow.png" target="_blank" rel="noopener" aria-label="Открыть изображение: Путь пользователя от входа до оценки события"><img class="case-image" src="images/reflectime-case/user-flow.png" alt="Путь пользователя от входа до оценки события" width="6412" height="1759" loading="lazy" decoding="async"></a>
+                  <figcaption>Путь пользователя от входа до оценки события</figcaption>
+                </figure>
+              </section>
+              <section class="case-section case-section--marathon" data-case-nav="Календарь">
+                <h3>Шаг 2. Оценка встречи в календаре</h3>
+                <p>В основе сценария — гипотеза, что сотруднику проще вспомнить встречу и оценить её, пока перед глазами календарь. После входа плагин показывает события, которые ждут оценки. Сотрудник выбирает, как прошла встреча, и может сразу перейти к следующей.</p>
+                <figure class="case-figure case-figure--wide">
+                  <a class="case-image-link" href="images/reflectime-case/login.png" target="_blank" rel="noopener" aria-label="Открыть изображение: Вход в ReflecTime через Яндекс ID"><img class="case-image" src="images/reflectime-case/login.png" alt="Вход в ReflecTime через Яндекс ID" width="1920" height="1080" loading="lazy" decoding="async"></a>
+                  <figcaption>Вход в ReflecTime через Яндекс ID</figcaption>
+                </figure>
+                <figure class="case-figure case-figure--wide">
+                  <a class="case-image-link" href="images/reflectime-case/unrated.png" target="_blank" rel="noopener" aria-label="Открыть изображение: Плагин после входа показывает встречи без оценки"><img class="case-image" src="images/reflectime-case/unrated.png" alt="Плагин после входа показывает встречи без оценки" width="1920" height="1080" loading="lazy" decoding="async"></a>
+                  <figcaption>Плагин после входа показывает встречи без оценки</figcaption>
+                </figure>
+                <figure class="case-figure case-figure--wide">
+                  <a class="case-image-link" href="images/reflectime-case/rating.png" target="_blank" rel="noopener" aria-label="Открыть изображение: Первый шаг опроса после встречи"><img class="case-image" src="images/reflectime-case/rating.png" alt="Первый шаг опроса после встречи" width="1920" height="1080" loading="lazy" decoding="async"></a>
+                  <figcaption>Первый шаг опроса после встречи</figcaption>
+                </figure>
+                <figure class="case-figure case-figure--wide">
+                  <a class="case-image-link" href="images/reflectime-case/remaining-events.png" target="_blank" rel="noopener" aria-label="Открыть изображение: Оценка сохранена. Можно перейти к следующей встрече"><img class="case-image" src="images/reflectime-case/remaining-events.png" alt="Оценка сохранена. Можно перейти к следующей встрече" width="1920" height="1080" loading="lazy" decoding="async"></a>
+                  <figcaption>Оценка сохранена. Можно перейти к следующей встрече</figcaption>
+                </figure>
+                <figure class="case-figure case-figure--wide">
+                  <a class="case-image-link" href="images/reflectime-case/event-notification.png" target="_blank" rel="noopener" aria-label="Открыть изображение: Напоминание в календаре после оценки одной встречи"><img class="case-image" src="images/reflectime-case/event-notification.png" alt="Напоминание в календаре после оценки одной встречи" width="1920" height="1080" loading="lazy" decoding="async"></a>
+                  <figcaption>Напоминание в календаре после оценки одной встречи</figcaption>
+                </figure>
+                <figure class="case-figure case-figure--wide">
+                  <a class="case-image-link" href="images/reflectime-case/events-notification.png" target="_blank" rel="noopener" aria-label="Открыть изображение: Уведомление после оценки событий"><img class="case-image" src="images/reflectime-case/events-notification.png" alt="Уведомление после оценки событий" width="1920" height="1080" loading="lazy" decoding="async"></a>
+                  <figcaption>Уведомление после оценки событий</figcaption>
+                </figure>
+              </section>
+              <section class="case-section case-section--marathon" data-case-nav="События и статистика">
+                <h3>От отдельной встречи к общей картине</h3>
+                <p>В списке событий сотрудник может найти нужную встречу и посмотреть её оценку. Для предстоящего события плагин показывает прогноз, а в разделе статистики можно проследить изменения за выбранный период.</p>
+                <figure class="case-figure case-figure--wide">
+                  <a class="case-image-link" href="images/reflectime-case/all-events.png" target="_blank" rel="noopener" aria-label="Открыть изображение: События календаря и их оценки"><img class="case-image" src="images/reflectime-case/all-events.png" alt="События календаря и их оценки" width="1920" height="1080" loading="lazy" decoding="async"></a>
+                  <figcaption>События календаря и их оценки</figcaption>
+                </figure>
+                <figure class="case-figure case-figure--wide">
+                  <a class="case-image-link" href="images/reflectime-case/forecast.png" target="_blank" rel="noopener" aria-label="Открыть изображение: Прогноз для предстоящей встречи в календаре"><img class="case-image" src="images/reflectime-case/forecast.png" alt="Прогноз для предстоящей встречи в календаре" width="1920" height="1080" loading="lazy" decoding="async"></a>
+                  <figcaption>Прогноз для предстоящей встречи в календаре</figcaption>
+                </figure>
+                <figure class="case-figure case-figure--wide">
+                  <a class="case-image-link" href="images/reflectime-case/statistics.png" target="_blank" rel="noopener" aria-label="Открыть изображение: Статистика по событиям за выбранный период"><img class="case-image" src="images/reflectime-case/statistics.png" alt="Статистика по событиям за выбранный период" width="1920" height="1080" loading="lazy" decoding="async"></a>
+                  <figcaption>Статистика по событиям за выбранный период</figcaption>
+                </figure>
+              </section>
+              <section class="case-section case-section--marathon" data-case-nav="Администратор">
+                <h3>Работа со структурой команды</h3>
+                <p>Список участников и таблица подразделений дают два способа посмотреть на организацию. Когда важно увидеть связи между людьми, администратор может построить граф и развернуть его на весь экран.</p>
+                <figure class="case-figure case-figure--wide">
+                  <a class="case-image-link" href="images/reflectime-case/members.png" target="_blank" rel="noopener" aria-label="Открыть изображение: Структура организации — участники"><img class="case-image" src="images/reflectime-case/members.png" alt="Структура организации — участники" width="1920" height="1080" loading="lazy" decoding="async"></a>
+                  <figcaption>Структура организации — участники</figcaption>
+                </figure>
+                <figure class="case-figure case-figure--wide">
+                  <a class="case-image-link" href="images/reflectime-case/departments.png" target="_blank" rel="noopener" aria-label="Открыть изображение: Структура организации — подразделения"><img class="case-image" src="images/reflectime-case/departments.png" alt="Структура организации — подразделения" width="1920" height="1080" loading="lazy" decoding="async"></a>
+                  <figcaption>Структура организации — подразделения</figcaption>
+                </figure>
+                <figure class="case-figure case-figure--wide">
+                  <a class="case-image-link" href="images/reflectime-case/connections.png" target="_blank" rel="noopener" aria-label="Открыть изображение: Конструктор графа социальных связей"><img class="case-image" src="images/reflectime-case/connections.png" alt="Конструктор графа социальных связей" width="1440" height="1000" loading="lazy" decoding="async"></a>
+                  <figcaption>Конструктор графа социальных связей</figcaption>
+                </figure>
+                <figure class="case-figure case-figure--wide">
+                  <a class="case-image-link" href="images/reflectime-case/connections-full.png" target="_blank" rel="noopener" aria-label="Открыть изображение: Граф связей в полноэкранном режиме"><img class="case-image" src="images/reflectime-case/connections-full.png" alt="Граф связей в полноэкранном режиме" width="1440" height="1000" loading="lazy" decoding="async"></a>
+                  <figcaption>Граф связей в полноэкранном режиме</figcaption>
+                </figure>
+              </section>
+              <section class="case-section case-section--marathon" data-case-nav="Исследования">
+                <h3>Шаг 3. Проверка гипотез</h3>
+                <p>Дизайн-решения формулировали как гипотезы и проверяли их на юзабилити-тестах.</p>
+              </section>
+              <section class="case-section case-section--marathon" data-case-nav="Результат">
+                <h3>Результат</h3>
+                <p>За шесть месяцев я спроектировала путь сотрудника от встречи в календаре до просмотра статистики и рабочее пространство администратора. Команда выпустила ReflecTime в продакшен.</p>
+              </section>
+            </div></div></div>
+          </details>
         </article>
 
         <article class="project-card" aria-labelledby="project-hse-title" data-reveal="image">

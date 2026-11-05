@@ -405,16 +405,12 @@ body.is-modal-open { position: fixed; top: var(--modal-scroll-offset); inset-inl
 .case-hypothesis > p { max-width: 44rem; line-height: 1.6; }
 .case-hypothesis > p + p { margin-top: .75rem; }
 .case-kicker { font-size: .8125rem; color: var(--color-muted); }
-.marathon-toc { position: sticky; top: 4.25rem; z-index: 1; background: var(--color-bg); padding: .5rem 0; }
-.marathon-toc select { width: 100%; padding: .625rem; border-radius: .5rem; border: 1px solid var(--color-border); font: inherit; background: var(--color-paper); color: var(--color-text); }
-.marathon-toc__links { display: none; }
+.marathon-toc { display: none; }
 .marathon-article { min-width: 0; }
-.project-dialog .marathon-article [data-case-nav] { scroll-margin-top: 8.25rem; }
 @media (min-width: 960px) {
   .project-dialog:has(.marathon-layout) { width: min(78rem, calc(100% - 4rem)); }
   .project-dialog .marathon-layout { display: grid; grid-template-columns: 10rem minmax(0, 1fr); gap: clamp(1.5rem, 3vw, 3rem); }
-  .marathon-toc { align-self: start; top: 4.75rem; max-height: calc(100dvh - 11rem); overflow-y: auto; }
-  .marathon-toc select { display: none; }
+  .marathon-toc { display: block; position: sticky; z-index: 1; background: var(--color-bg); padding: .5rem 0; align-self: start; top: 4.75rem; max-height: calc(100dvh - 11rem); overflow-y: auto; }
   .marathon-toc__links { display: grid; gap: .125rem; }
   .marathon-toc__links::before { content: "Содержание"; font-size: .8125rem; color: var(--color-muted); margin-bottom: .625rem; }
   .marathon-toc__links button { border: 0; border-left: 2px solid var(--color-border); background: none; color: var(--color-muted); text-align: left; padding: .45rem .65rem; border-radius: 0; font-size: .9375rem; }
