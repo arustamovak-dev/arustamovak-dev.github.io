@@ -424,16 +424,21 @@
         title.prepend(dialogLogo);
         title.classList.add("has-logo");
       }
-      const preview = card.querySelector(".project-card__preview").cloneNode(true);
-      preview.className = "media project-dialog__preview";
-      preview.querySelector("img").loading = "eager";
       const description = card.querySelector(".project-case__content").cloneNode(true);
-      description.querySelector(".project-case__cover").replaceChildren(preview);
+      const cover = description.querySelector(".project-case__cover");
+      let previewImage;
+      if (cover) {
+        const preview = card.querySelector(".project-card__preview").cloneNode(true);
+        preview.className = "media project-dialog__preview";
+        previewImage = preview.querySelector("img");
+        previewImage.loading = "eager";
+        cover.replaceChildren(preview);
+      }
       content.replaceChildren(description);
       initImages(dialog);
       controller.open(trigger);
       disposeNavigation = initCaseNavigation(dialog, description);
-      disposePreviews = initModalPreview(preview.querySelector("img"));
+      disposePreviews = initModalPreview(previewImage);
     }
 
     document.querySelectorAll(".project-card").forEach((card) => {
