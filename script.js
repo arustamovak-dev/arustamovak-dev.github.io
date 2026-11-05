@@ -349,13 +349,68 @@
     return { open };
   }
 
+  function initCaseNavigation(dialog, description) {
+    const layout = description.querySelector(".marathon-layout");
+    if (!layout) return () => {};
+    const sections = [...layout.querySelectorAll("[data-case-nav]")];
+    const nav = document.createElement("nav");
+    nav.className = "marathon-toc";
+    nav.setAttribute("aria-label", "Содержание кейса");
+    const links = document.createElement("div");
+    links.className = "marathon-toc__links";
+    const select = document.createElement("select");
+    select.setAttribute("aria-label", "Перейти к разделу кейса");
+    const jump = index => {
+      const section = sections[index];
+      section.focus({ preventScroll: true });
+      section.scrollIntoView({ block: "start", behavior: "instant" });
+    };
+    const buttons = sections.map((section, index) => {
+      section.tabIndex = -1;
+      const button = document.createElement("button");
+      button.type = "button";
+      button.textContent = section.dataset.caseNav;
+      if (section.classList.contains("case-hypothesis")) button.className = "is-sub";
+      button.addEventListener("click", () => jump(index));
+      links.append(button);
+      select.add(new Option(button.textContent, String(index)));
+      return button;
+    });
+    select.addEventListener("change", () => jump(select.selectedIndex));
+    nav.append(links, select);
+    layout.prepend(nav);
+    const sync = () => {
+      const last = dialog.scrollTop + dialog.clientHeight >= dialog.scrollHeight - 2;
+      const top = dialog.getBoundingClientRect().top +
+        parseFloat(getComputedStyle(sections[0]).scrollMarginTop) + 2;
+      let index = 0;
+      sections.forEach((section, i) => {
+        if (last || section.getBoundingClientRect().top <= top) index = i;
+      });
+      buttons.forEach((button, i) => {
+        if (i === index) button.setAttribute("aria-current", "location");
+        else button.removeAttribute("aria-current");
+      });
+      select.selectedIndex = index;
+    };
+    dialog.addEventListener("scroll", sync, { passive: true });
+    window.addEventListener("resize", sync);
+    sync();
+    return () => {
+      dialog.removeEventListener("scroll", sync);
+      window.removeEventListener("resize", sync);
+    };
+  }
+
   function initProjectDialogs() {
     const dialog = document.querySelector("#project-dialog");
     const title = document.querySelector("#project-dialog-title");
     const content = document.querySelector("#project-dialog-content");
+    let disposeNavigation = () => {};
     let disposePreviews = () => {};
     const controller = createDialogController(dialog, title, () => {
       disposePreviews();
+      disposeNavigation();
       content.replaceChildren();
     });
     if (!controller) return;
@@ -381,6 +436,7 @@
       content.replaceChildren(description);
       initImages(dialog);
       controller.open(trigger);
+      disposeNavigation = initCaseNavigation(dialog, description);
       disposePreviews = initModalPreview(preview.querySelector("img"));
     }
 

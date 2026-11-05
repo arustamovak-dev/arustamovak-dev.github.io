@@ -17,8 +17,8 @@
   <link rel="icon" href="favicon.ico?v=20261001" sizes="16x16 32x32 48x48">
   <link rel="icon" type="image/png" href="favicon.png?v=20261001" sizes="32x32">
   <link rel="apple-touch-icon" href="apple-touch-icon.png?v=20261001" sizes="180x180">
-  <link rel="stylesheet" href="styles.css?v=20261105-1">
-  <script src="script.js?v=20260926" defer></script>
+  <link rel="stylesheet" href="styles.css?v=20261105-2">
+  <script src="script.js?v=20261105" defer></script>
   <script src="interaction-cursor.js?v=20260922" defer></script>
 </head>
 <body>
@@ -73,8 +73,8 @@
                 <ul class="project-card__tags" aria-label="Направления проекта"><li>UX/UI</li><li>Research</li><li>A/B-тесты</li><li>Адаптивы</li></ul>
               </div>
             </summary>
-            <div class="project-case__content">
-            <dl class="case-overview">
+            <div class="project-case__content"><div class="marathon-layout"><div class="marathon-article">
+            <dl class="case-overview" data-case-nav="О проекте">
             <div><dt>Сайт</dt><dd><a class="text-link case-website" href="https://it-marathon.21-school.ru/" target="_blank" rel="noopener noreferrer">it-marathon.21-school.ru</a></dd></div>
             <div><dt>Контекст</dt><dd><p class="project-case__description">«Цифровой марафон» — всероссийский конкурс по цифровым навыкам от Сбера, «Школы 21» и Нетологии. Участники выбирают один из трёх уровней, проходят бесплатные курсы, онлайн-тестирование и проектный этап, лучшие выходят в очный финал. Платформа состоит из лендинга с регистрацией, личного кабинета участника и модуля тестирования.</p></dd></div>
             <div><dt>Срок</dt><dd>10 месяцев (2025–2026)</dd></div>
@@ -82,10 +82,11 @@
             <div><dt>Моя роль</dt><dd><p>Продуктовый дизайнер, провела редизайн в соответствии с новой дизайн-системой Сбера.</p><ul class="case-tags case-tags--role" aria-label="Направления работы"><li>UX/UI</li><li>Research</li><li>A/B-тесты</li><li>Адаптивы</li></ul></dd></div>
             <div><dt>Платформы</dt><dd><ul class="case-tags"><li>Desktop</li><li>Tablet</li><li>Mobile</li></ul></dd></div>
             </dl><div class="project-case__cover"></div>
-            <section class="case-section case-section--marathon"><h3>Задача</h3>
+            <section class="case-section case-section--marathon" data-case-nav="Задача"><h3>Задача</h3>
             <p>Перевести платформу на новую дизайн-систему Сбера и сделать регистрацию главным сценарием сайта: перестроить лендинг, изменить личный кабинет и ввести асинхронное тестирование. Регистрация открыта ограниченное время, поэтому каждый процент конверсии напрямую влияет на число участников марафона.</p>
             </section>
-            <section class="case-section case-section--marathon"><h3>Шаг 1. Анализ</h3>
+            <section class="case-section case-section--marathon" data-case-nav="Анализ"><h3>Шаг 1. Анализ</h3>
+            <p>Перед проектированием разобрала воронку старого сайта: из визита в регистрацию доходили 10% посетителей, основная потеря была на лендинге, до кнопки регистрации доходила лишь часть посетителей. Это определило приоритет: сначала лендинг и flow регистрации, потом кабинет.</p>
             <p>Перед началом работы я проанализировала прежнюю версию сайта и типичные сценарии пользователей, а также изучила гайдлайны новой дизайн-системы Сбера. Анализ показал три главные проблемы:</p>
             <ul class="case-bullets">
             <li>Перегруженная главная. Лендинг был построен как страница о конкурсе, а не как путь к регистрации: описания этапов, призов и партнёров конкурировали друг с другом за внимание.</li>
@@ -94,32 +95,42 @@
             </ul>
 
             </section>
-            <section class="case-section case-section--marathon"><h3>Шаг 2. Проектирование</h3>
-            <p>На основе анализа сформулировала гипотезы и перевела их в решения для лендинга, личного кабинета и тестирования. Спроектировала макеты ключевых сценариев и адаптивные версии, собрала их на едином UI-kit в новой дизайн-системе Сбера.</p>
-            <p>Если перестроить лендинг вокруг регистрации, конверсия вырастет. Вынесла призыв к регистрации в первый экран и закрепила кнопку при скролле. Разгрузила главную: блоки про уровни, этапы и призы сократила и переписала так, чтобы они снимали сомнения перед регистрацией, а не просто описывали конкурс. Типографику и компоненты привела к дизайн-системе Сбера.</p>
+            <section class="case-section case-section--marathon" data-case-nav="Проектирование"><h3>Шаг 2. Проектирование</h3>
+            <p>Для каждого сценария сформулировала гипотезу и перевела её в макеты. Ниже — что хотела изменить в поведении участников и какие решения для этого спроектировала.</p>
+            <section class="case-hypothesis" data-case-nav="Лендинг"><p class="case-kicker">Гипотеза 01</p><h4>Сделать регистрацию заметнее</h4>
+            <p>Если показать кнопку регистрации на первом экране и оставить её доступной при прокрутке, больше посетителей перейдут к регистрации.</p>
+            <p><strong>Решение.</strong> Вынесла кнопку на первый экран и закрепила её при прокрутке. Сократила описания уровней, этапов и призов: теперь они помогают выбрать категорию участия и решить, стоит ли регистрироваться.</p>
             <figure class="case-figure case-figure--wide"><a class="case-image-link" href="images/marathon-landing-comparison.png?v=20261105" target="_blank" rel="noopener" aria-label="Открыть изображение: До/после — лендинг"><img class="case-image" src="images/marathon-landing-comparison.png?v=20261105" alt="До/после — лендинг" width="3218" height="6900" loading="lazy" decoding="async"></a><figcaption>До/после — лендинг</figcaption></figure>
-            <p>Личный кабинет собрала вокруг пути участника: в разделе «Этапы» марафон показан как трек со статусами, сроками и ближайшим действием. Участник всегда видит, что делать дальше, и не теряется между обучением, тестом и проектным этапом.</p>
+            </section>
+            <section class="case-hypothesis" data-case-nav="Личный кабинет"><p class="case-kicker">Гипотеза 02</p><h4>Показать прогресс и следующий шаг</h4>
+            <p>Если участник видит свой прогресс и понимает, что делать дальше, ему проще пройти марафон до конца.</p>
+            <p><strong>Решение.</strong> Объединила этапы в трек со сроками, статусами и ближайшим действием. Рядом вывела набранные баллы и место в рейтинге. В окне этапа показала, за какие задания начисляются баллы, а в профиле разделила поля на смысловые блоки.</p>
             <figure class="case-figure case-figure--wide"><a class="case-image-link" href="images/marathon-stages-comparison.png?v=20261105" target="_blank" rel="noopener" aria-label="Открыть изображение: До/после — этапы"><img class="case-image" src="images/marathon-stages-comparison.png?v=20261105" alt="До/после — этапы" width="3208" height="1630" loading="lazy" decoding="async"></a><figcaption><strong>До/после — этапы.</strong> Добавила Stories с партнёрами и обновила оформление этапов в соответствии с лендингом и новой дизайн-системой Сбера. Экран стал визуально привлекательнее и согласованнее с остальной платформой.</figcaption></figure>
             <figure class="case-figure case-figure--wide"><a class="case-image-link" href="images/marathon-stage-dialog-comparison.png?v=20261105" target="_blank" rel="noopener" aria-label="Открыть изображение: До/после — этапы: модальное окно"><img class="case-image" src="images/marathon-stage-dialog-comparison.png?v=20261105" alt="До/после — этапы: модальное окно" width="3208" height="1225" loading="lazy" decoding="async"></a><figcaption><strong>До/после — этапы: модальное окно.</strong> Обновила визуализацию баллов и их начисления, используя знакомые элементы системы. Повторное использование компонентов сделало информацию нагляднее, а интерфейс — последовательнее.</figcaption></figure>
             <figure class="case-figure case-figure--wide"><a class="case-image-link" href="images/marathon-profile-comparison.png?v=20261105" target="_blank" rel="noopener" aria-label="Открыть изображение: До/после — профиль"><img class="case-image" src="images/marathon-profile-comparison.png?v=20261105" alt="До/после — профиль" width="3208" height="1232" loading="lazy" decoding="async"></a><figcaption><strong>До/после — профиль.</strong> Переработала форму профиля: сгруппировала поля по смысловым блокам и улучшила считываемость информации.</figcaption></figure>
-            <p>Если участник видит своё место среди других и свой прогресс в баллах, у него больше причин дойти до конца. Добавила в «Этапы» статистику: сколько баллов набрал участник и на каком месте он находится в своей категории. Прохождение этапов превращается в понятное соревнование, а не в список заданий.</p>
-            <p>Если дать способ набрать дополнительные баллы, участники будут возвращаться в кабинет. Ввела в «Этапы» блок интеграций с партнёрами в формате Stories: участник открывает карточку партнёра, выполняет задание и получает дополнительные баллы. Формат знаком по соцсетям, поэтому не требует объяснений и хорошо работает на мобильных.</p>
-            <figure class="case-figure case-figure--wide"><a class="case-image-link" href="images/marathon-partner-stories.png?v=20261105" target="_blank" rel="noopener" aria-label="Открыть изображение: Stories партнёров"><img class="case-image" src="images/marathon-partner-stories.png?v=20261105" alt="Stories партнёров" width="1512" height="1660" loading="lazy" decoding="async"></a><figcaption>Stories партнёров</figcaption></figure>
-            <p>Тестирование сделала асинхронным: участник проходит его в удобное время в рамках окна этапа. На экране только нужное: один вопрос за раз, прогресс и оставшееся время, ответы сохраняются, чтобы обрыв связи не обнулял результат.</p>
-            <figure class="case-figure case-figure--wide"><a class="case-image-link" href="images/marathon-testing.png" target="_blank" rel="noopener" aria-label="Открыть изображение: Прохождение тестирования"><img class="case-image" src="images/marathon-testing.png" alt="Прохождение тестирования" width="1512" height="982" loading="lazy" decoding="async"></a><figcaption>Прохождение тестирования</figcaption></figure>
-            <p>Мобильную версию проектировала как отдельные сценарии, а не как сжатый десктоп: регистрация, тест и Stories партнёров проходятся с телефона одной рукой. Сценарии «Виртуальный мир» и «Самокат» — партнёрские Stories, за которые пользователи получают баллы.</p>
-            <p>Все три площадки собрала на едином UI-kit в новой дизайн-системе Сбера с адаптивами под десктоп, планшет и мобильные. Согласование макетов вела с бренд-командой Сбера.</p>
-            <figure class="case-figure case-figure--wide"><a class="case-image-link" href="images/marathon-responsive.png" target="_blank" rel="noopener" aria-label="Открыть изображение: Адаптивные версии лендинга"><img class="case-image" src="images/marathon-responsive.png" alt="Адаптивные версии лендинга" width="1550" height="1110" loading="lazy" decoding="async"></a><figcaption>Адаптивные версии лендинга</figcaption></figure>
             </section>
-            <section class="case-section case-section--marathon"><h3>Шаг 3. Исследования</h3>
+            <section class="case-hypothesis" data-case-nav="Партнёрские Stories"><p class="case-kicker">Гипотеза 03</p><h4>Дать повод вернуться в кабинет</h4>
+            <p>Если между этапами можно заработать дополнительные баллы, у участника будет повод вернуться на платформу.</p>
+            <p><strong>Решение.</strong> Добавила партнёрские Stories в раздел «Этапы»: участник открывает карточку, выполняет задание и получает баллы. Для мобильной версии отдельно проработала сценарии «Виртуальный мир» и «Самокат».</p>
+            <figure class="case-figure case-figure--wide"><a class="case-image-link" href="images/marathon-partner-stories.png?v=20261105" target="_blank" rel="noopener" aria-label="Открыть изображение: Stories партнёров"><img class="case-image" src="images/marathon-partner-stories.png?v=20261105" alt="Stories партнёров" width="1512" height="1660" loading="lazy" decoding="async"></a><figcaption>Stories партнёров</figcaption></figure>
+            </section>
+            <section class="case-hypothesis" data-case-nav="Тестирование"><p class="case-kicker">Гипотеза 04</p><h4>Помочь участнику закончить тест</h4>
+            <p>Если тест можно пройти в удобное время и не потерять ответы при обрыве связи, участнику будет проще завершить этап.</p>
+            <p><strong>Решение.</strong> Спроектировала асинхронное тестирование: участник сам выбирает время в пределах этапа. На экране оставила один вопрос, прогресс и таймер; ответы сохраняются по ходу теста.</p>
+            <figure class="case-figure case-figure--wide"><a class="case-image-link" href="images/marathon-testing.png" target="_blank" rel="noopener" aria-label="Открыть изображение: Прохождение тестирования"><img class="case-image" src="images/marathon-testing.png" alt="Прохождение тестирования" width="1512" height="982" loading="lazy" decoding="async"></a><figcaption>Прохождение тестирования</figcaption></figure>
+            </section>
+            <section class="case-hypothesis"><h4>Единый интерфейс на трёх устройствах</h4><p>Собрала лендинг, кабинет и тестирование на едином UI-kit Сбера. Для телефона проработала регистрацию и тестирование как сценарии для одной руки. Макеты для компьютера, планшета и телефона согласовала с бренд-командой.</p>
+            <figure class="case-figure case-figure--wide"><a class="case-image-link" href="images/marathon-responsive.png" target="_blank" rel="noopener" aria-label="Открыть изображение: Адаптивные версии лендинга"><img class="case-image" src="images/marathon-responsive.png" alt="Адаптивные версии лендинга" width="1550" height="1110" loading="lazy" decoding="async"></a><figcaption>Адаптивные версии лендинга</figcaption></figure>
+            </section></section>
+            <section class="case-section case-section--marathon" data-case-nav="Исследования"><h3>Шаг 3. Исследования</h3>
             <dl class="case-overview">
             <div><dt>Методы</dt><dd>Анализ воронки и пользовательских сценариев, коридорное тестирование, A/B-тесты.</dd></div>
             <div><dt>Выборка</dt><dd>Для A/B-тестов — посетители сайта во время регистрационной кампании. Старая и новая версии показывались в равных долях — 50/50.</dd></div>
             </dl>
-            <p>Перед проектированием разобрала воронку старого сайта: из визита в регистрацию доходили 10% посетителей, основная потеря была на лендинге, до кнопки регистрации доходила лишь часть посетителей. Это определило приоритет: сначала лендинг и flow регистрации, потом кабинет.</p>
-            <p>Эффект проверяла A/B-тестами на живом трафике во время регистрационной кампании. Старая и новая версии показывались посетителям в равных долях, сравнивали конверсию из визита в регистрацию и долю участников, дошедших до конца этапов.</p>
+
+            <p>Сравнивали две метрики: конверсию из визита в регистрацию и долю участников, которые прошли этапы марафона до конца. Эти показатели отражают эффект редизайна в целом.</p>
             </section>
-            <section class="case-section case-section--marathon case-section--result"><h3>Результат</h3>
+            <section class="case-section case-section--marathon case-section--result" data-case-nav="Результат"><h3>Результат</h3>
             <p>Провела редизайн платформы всероссийского конкурса в новой дизайн-системе Сбера: лендинг, личный кабинет с треком этапов, статистикой и Stories партнёров, асинхронное тестирование и адаптивы для трёх типов устройств на едином UI-kit.</p>
             <ul class="case-bullets">
             <li><strong>Конверсия из визита в регистрацию выросла с 10% до 20%</strong>: исправленный flow и лендинг, построенный вокруг регистрации, удвоили число участников с того же трафика.</li>
@@ -128,7 +139,7 @@
             </ul>
             <p>Проект показал мне, как работать в рамках жёсткой дизайн-системы и при этом находить выразительные решения.</p>
             </section>
-            </div>
+            </div></div></div>
           </details>
         </article>
 
